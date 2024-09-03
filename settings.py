@@ -88,3 +88,42 @@ DEMO_PAGE_INTRO_HTML = """ """
 INSTALLED_APPS = ['otree']
 #DEBUG = False
 #AUTH_LEVEL = DEMO
+
+
+ROOMS = [
+    {
+        'name': 'dpn',
+        'display_name': 'DPN Class',
+        'participant_label_file': '_rooms/dpn.txt',
+    },
+    {
+        'name': 'be',
+        'display_name': 'BE Class',
+        'participant_label_file': '_rooms/be.txt',
+    },
+    {
+        'name': 'mba',
+        'display_name': 'MBA Class',
+        'participant_label_file': '_rooms/mba.txt',
+    },
+    {
+        'name': 'sdc',
+        'display_name': 'SDC',
+        'participant_label_file': '_rooms/sdc.txt',
+    },
+    {
+        'name': '1',
+        'display_name': 'Room 1',
+        'participant_label_file': '_rooms/1.txt',
+    },
+    {
+        'name': '2',
+        'display_name': 'Room 2',
+        'participant_label_file': '_rooms/2.txt',
+    },
+    {
+        'name': '3',
+        'display_name': 'Room 3',
+        'participant_label_file': '_rooms/3.txt',
+    },
+]

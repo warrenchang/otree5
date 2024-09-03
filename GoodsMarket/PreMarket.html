@@ -1,0 +1,45 @@
+{{ block global_scripts }}
+<script src="{{ static 'script.js' }}"></script>
+{{ endblock }}
+
+{{ block global_styles }}
+<link rel="stylesheet" href="{{ static 'style.css' }}">
+{{ endblock }}
+
+{{ block title }}
+Fish Market: pre-market information
+{{ endblock }}
+
+{{ block content }}
+<noscript>
+    <div id="jsError">ERROR: this page runs only with javascript enabled</div>
+</noscript>
+
+<!--<p>Soon, {{ if player.round_number <= C.num_trial_rounds }} trial round nr. {{ player.round_number }} {{ else }} round nr. {{ round }} {{ endif }} starts.</p>-->
+
+<div id="endowmentDiv" class="endowment-container row" style="margin-bottom: 35px">
+    <div class="endowment-div col-sm div_box">
+        <table id="endowmentTable">
+            <tr>
+                <th>Your Role</th>
+                <td id="traderRole"> {{ player.player_role }} </td>
+            </tr>
+            {{ if player.player_role == C.BUYER }}
+            <tr>
+                <th>Your Buyer Value</th>
+                <td id="buyerValue"> {{ player.buyer_value }} </td>
+            </tr>
+            {{ endif }}
+
+            {{ if player.player_role == C.SELLER }}
+            <tr>
+                <th>The number of fish you caught</th>
+                <td id="initalAssets"> {{ player.initialAssets }} </td>
+            </tr>
+            {{ endif }}
+        </table>
+    </div>
+</div>
+
+{{ next_button }}
+{{ endblock }}

@@ -1,0 +1,32 @@
+{{ extends 'otree/WaitPage.html' }}
+{{ block title }}
+Waiting for the other participants...
+{{ endblock }}
+
+{{ block content }}
+
+<div id="endowmentDiv" class="endowment-container row" style="margin-bottom: 35px">
+    <div class="col-sm div_box">
+        <table id="endowmentTable">
+            <tr>
+                <th>Your Role</th>
+                <td> {{ player.player_role }} </td>
+            </tr>
+            {{ if player.player_role == C.BUYER }}
+            <tr>
+                <th>Your Buyer Value</th>
+                <td> {{ player.buyer_value }} </td>
+            </tr>
+            {{ endif }}
+
+            {{ if player.player_role == C.SELLER }}
+            <tr>
+                <th>Number of fish </th>
+                <td> {{ player.initialAssets }} </td>
+            </tr>
+            {{ endif }}
+        </table>
+    </div>
+</div>
+
+{{ endblock }}

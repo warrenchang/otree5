@@ -1,0 +1,24 @@
+{{ block global_styles }}
+        <link rel="stylesheet" href="{{ static 'styleResults.css' }}">
+{{ endblock }}
+
+{{ block title }}
+Results
+{{ endblock }}
+
+{{ block content }}
+
+<p>In this round, your earnings is {{ payoff }}.</p>
+
+<div id="resultsDiv" class="results-container row" style="margin-bottom: 35px" >
+    <div class="result-div col-sm div_box">
+    <table id="resultsTable">
+        <tr><th>Your period income</th><td>{{ payoff }}</td></tr>
+    </table>
+    </div>
+</div>
+
+    {{ next_button }}
+{{ endblock }}
+
+
